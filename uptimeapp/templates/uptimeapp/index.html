@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Uptime checker</title>
+</head>
+
+<body>
+
+<h1>Uptime checker</h1>
+
+<div>
+<p>
+<table border="1" width="60%">
+<thead>
+<tr><td width="60%">Url</td><td width="10%">Status</td><td>Exceptions?</td></tr>
+</thead>
+<tbody>
+{% for url in urls %}
+<tr><td><a href="{{ url.url }}">{{ url.url }}</a></td><td>{{ url.cur_status }}</td><td>{{ url.exception_msg }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</p>
+</div>
+
+<p>
+<a href="add/">Add url</a>
+</p>
+
+</body>
+
+</html>
